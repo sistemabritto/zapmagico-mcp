@@ -1,0 +1,3 @@
+.env*
+.claude.json
+node_modules/

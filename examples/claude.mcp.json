@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "zapmagico": {
+      "type": "http",
+      "url": "https://www.zapmagico.com.br/api/mcp",
+      "headers": { "Authorization": "Bearer ${ZAPMAGICO_MCP_TOKEN}" }
+    }
+  }
+}
