@@ -4,7 +4,7 @@ Conecte sua loja ZapMágico a um assistente de IA para consultar pedidos, gerenc
 
 Este repositório distribui a **skill pública e exemplos de configuração do conector remoto**. O servidor roda na aplicação ZapMágico; este repositório não instala um servidor local nem inclui o código privado da plataforma.
 
-> Lançamento inicial: a implementação do servidor e painel foi criada na aplicação. O uso público depende da aplicação da migração MCP e do deploy. A publicação deste repositório não significa validação concluída dentro do ChatGPT ou Claude Code.
+> Servidor e painel publicados em 06/10/2026. MCP 1.1.0 verificado remotamente com o SDK oficial: conexão autenticada, ferramentas, prompt de catálogo e consulta da loja. O uso dentro do ChatGPT ou Claude Code depende da configuração e das permissões da conta; essa sessão em cada cliente ainda precisa ser validada.
 
 ![Painel Easy Setup MCP](docs/easy-setup.png)
 
