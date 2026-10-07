@@ -182,6 +182,12 @@ Descubra lojas com `admin_stores_list`. Um token de lojista nunca ganha acesso a
 
 ## Validação e limites conhecidos
 
+Atualização de **07/10/2026 · MCP 1.2.1**:
+
+- `price` aceita `59.90` ou `59,90`. Antes, o ponto decimal era lido como separador de milhar e `79.00` virava R$ 7.900,00. Ofertas criadas pelo MCP antes da correção merecem conferência de preço.
+- Slugs gerados a partir de títulos longos não terminam mais em hífen, o que fazia a atualização seguinte ser recusada.
+- `store_update` aceita `bannerUrl` para voltar a um banner que a loja já usou, sem consumir crédito. Só são aceitas URLs da pasta de banners da própria loja; links externos ou de outra loja são recusados.
+
 Atualização de **07/10/2026 · MCP 1.2.0**:
 
 | Verificação | Situação |
