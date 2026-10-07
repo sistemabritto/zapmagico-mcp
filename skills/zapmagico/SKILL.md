@@ -25,13 +25,13 @@ Endpoint: `https://www.zapmagico.com.br/api/mcp`. Setup: `https://www.zapmagico.
 | Criar/alterar oferta | `product_create` ou `product_get` → `product_update`; preserve campos existentes. |
 | Gerar capa ou obter prompt | Leia [references/imagens.md](references/imagens.md). Diferencie preparo gratuito do prompt e geração cobrada. |
 | Trabalhar com áudio/fotos em rascunho | `draft_create`, `media_upload`, `draft_transcribe`, `draft_generate_copy`, `draft_get`, `draft_save_copy`, `draft_publish`. Use o ID retornado e confira cada resultado. |
-| Configurar vitrine | `store_get` → `store_update`; preserve WhatsApp e campos não solicitados. Domínio depende do plano. |
+| Configurar vitrine | `store_get` → `store_update`; preserve WhatsApp e campos não solicitados. Para voltar a um banner que a loja já usou, passe `bannerUrl` com a URL anterior (sem custo); `store_generate_banner` cria outro e consome saldo. Domínio depende do plano. |
 | Atualizar pedido | Consulte `orders_list`, confirme o alvo e use `order_set_status` com o schema atual. |
 | Falha, timeout ou conexão recusada | Leia [references/recuperacao.md](references/recuperacao.md). |
 
 ## Preservar dados e intenção
 
-- Preços são em BRL; preço vazio significa consultar, não gratuito. Não invente valores, estoque, prazo, benefícios, garantias ou condições de entrega.
+- Preços são em BRL; preço vazio significa consultar, não gratuito. `price` aceita `59.90` ou `59,90`; confira o valor retornado depois de criar ou atualizar. Não invente valores, estoque, prazo, benefícios, garantias ou condições de entrega.
 - `product_update` recebe os dados principais completos. Consulte a oferta e mescle alterações com descrição, preço, slug, categoria, desconto, variações e preços por combinação existentes. Omitir campos pode apagar dados.
 - Crie rascunhos se faltarem dados ou autorização de publicação. Quando a publicação já estiver autorizada e os dados conferidos, prossiga sem pedir a mesma autorização novamente.
 - O contexto disponível é o da conversa atual; não afirme ler automaticamente todo o histórico do ChatGPT ou Claude.
