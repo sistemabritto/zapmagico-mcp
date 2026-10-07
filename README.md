@@ -53,6 +53,13 @@ A skill orienta o uso; o MCP fornece as ferramentas e faz as verificações de a
 - “Crie um rascunho para uma camiseta de R$59,90 com tamanhos P, M e G.”
 - “Melhore a descrição deste produto mantendo preço, imagens e variações.”
 - “Consulte os créditos antes de gerar um Design Mágico.”
+- “Crie um catálogo completo com capas comerciais usando o Design Mágico, revise e publique.”
+
+## Catálogos com Design Mágico
+
+A skill e o prompt MCP `catalogo_com_design_magico` orientam criar os produtos em rascunho, gerar capas comerciais, revisar a imagem e publicar quando autorizado. Use `product_create_image`, com `referenceMode: "none"` para produtos digitais ou redesign sem aproveitar a imagem anterior. `setAsCover: true` é o padrão do MCP: a geração vira a capa sem apagar o restante da galeria. Não substitua o Design Mágico por cartões de texto improvisados.
+
+Geração consome créditos conforme plano e motor. A resposta confirma `imageId`, `imageUrl` e `coverSet`. Se apenas a promoção a capa falhar, reordene a imagem salva; não gere novamente. Após timeout, consulte o produto antes de repetir.
 
 ## ChatGPT
 
